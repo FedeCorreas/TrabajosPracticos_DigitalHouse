@@ -1,2 +1,3 @@
 # TrabajosPracticos_DigitalHouse
-Trabajos ordenados por carpetas.
+
+En este repositorio están mis trabajos prácticos de Digital House, ordenados por carpetas.
