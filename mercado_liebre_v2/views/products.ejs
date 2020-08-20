@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<%-include('./partials/head') %>
+<!-- Fin head -->
+<body>
+	<!-- Header -->
+	<%-include('./partials/header') %>
+	<!-- Fin header -->
+
+    <!-- Detalle del producto -->
+
+	<div class="container products-wrapper">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="products-title">Detalle del producto: <%= productFind.name %></h2>
+			</div>
+		</div>
+		<div class="product-detail">
+			<div class="row">
+				<div class="col-12 col-lg-8 left">
+					<img src="/images/products/<%= productFind.image %>" alt="product image" class="product-detail-img">
+					<h2 class="products-title"> Descripción</h2>
+					<p class="product-detail-description">
+						<%= productFind.description %>
+					</p>
+				</div>
+				<div class="col-12 col-lg-4 right">
+					<article class="container product-detail-info">
+						<h2 class="product-detail-title col-12"><%= productFind.name %></h2><br>
+						<div class="product-detail-price small">
+								<span class="col-4 col-lg-2">$<%= toThousand(productFind.price1) %></span>
+								/
+								<b class="col-4 col-lg-2"><%= productFind.discount %>% OFF</b><br>
+						</div>
+						<span class="product-detail-price col-12">$<%= toThousand(precioNeto) %></span>
+						<ul class="actions-list">
+							<li class="row">
+								<i class="fas fa-credit-card"></i>
+								<p>Pagá en 12 cuotas sin interés</p>
+							</li>
+							<li class="row">
+								<i class="fas fa-store"></i>
+								<p>Retiro gratis en local del vendedor</p>
+							</li>
+						</ul>
+
+						<a href="#" class="buy-now-button">COMPRAR AHORA</a>
+					</article>
+				</div>
+			</div>
+		</div>
+	</div>
+    <!-- Fin detalle del producto -->
+    <!-- footer -->
+	<%-include('./partials/footer')%>
+	<!-- Fin footer -->
+</body>
+</html>
